@@ -64,7 +64,7 @@
 
  1. res/AndroidManifest.xml
  	- Activities 명시적 추가
- 	- GPS, REST API, 디바이스 스토리지 접근 권한 설정 등
+ 	- GPS, REST API, 디바이스 스토리지 등 접근 권한 설정
 
  1. gradle/build.gradle(:app)
  	- 외부 라이브러리의 dependencies 설정 등

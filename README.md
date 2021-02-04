@@ -13,7 +13,7 @@
  	- Google Map API를 사용하기 위해, 사용자 인증이 필요함 (=> key 정보를 제공하는 사이트)
  	- Google Cloud Platform > Google Maps Platform > 사용자 인증 정보
 
-### 선박 입‧출항 정보 REST API
+### 선박 입/출항 정보 REST API
 - [공공 데이터](https://data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15000990)
  	- 선박 입‧출항 정보를 받아오는 REST API 사용법 관련 정보 제공 사이트
  	- [부산항만공사 가이드북](https://www.chainportal.co.kr/template/OpenAPIGuide.pdf)

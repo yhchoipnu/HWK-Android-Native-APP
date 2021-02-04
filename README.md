@@ -26,7 +26,8 @@
  	- 위치정보 관련 로직 (갱신 주기 : 5s로 임의 설정하였음)
 
  1. EstimateActivity.java
- 	- 견적서 작성 및 csv 파일로 저장 로직(파일 저장 위치: 파일관리자>내부저장소>Android>data>프로젝트명(현재: S3LabBahk)>files에 저장됨)
+ 	- 견적서 작성 및 csv 파일로 저장 로직
+ 	- csv 파일 저장 위치 : 파일관리자>내부저장소>Android>data>프로젝트명(현재: S3LabBahk)>files에 저장됨
 
  1. EstimateDateFragment.java
  	- 견적서 액티비티의 달력용 로직
@@ -62,13 +63,15 @@
  	- Spinner 등에 출력해 줄 array(list) 값 설정
 
  1. res/AndroidManifest.xml
- 	- 1. Activities 명시적 추가 2. GPS, REST API, 스토리지(파일 등) 권한 설정 등
+ 	- Activities 명시적 추가
+ 	- GPS, REST API, 스토리지(파일 등) 권한 설정 등
 
  1. gradle/build.gradle(:app)
  	- 외부 라이브러리의 dependencies 설정 등
 
  1. gradle/build.gradle(프로젝트명)
- 	- 현재 기준 : S3LabBahk (이는, 실제 APP name으로 사용됨)
+ 	- 프로젝트 전체에 대한 gradle file
+ 	- ※ [참고] 프로젝트명 : 실제 APP name으로 사용됨
 
 ## 라이브러리 목록
 

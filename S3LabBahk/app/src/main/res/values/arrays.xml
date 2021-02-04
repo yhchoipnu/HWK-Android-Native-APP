@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="dest">
+        <item>부산항</item>
+        <item>인천항</item>
+        <item>울산항</item>
+    </string-array>
+
+    <string-array name="occt">
+        <item>외항</item>
+        <item>내항</item>
+    </string-array>
+
+    <string-array name="RIExptType">
+        <item>예정</item>
+        <item>실제</item>
+    </string-array>
+
+    <string-array name="currSpeed">
+        <item>1~5 Knot</item>
+        <item>5~8 Knot</item>
+        <item>8~12 Knot</item>
+        <item>12~15 Knot</item>
+        <item>15~20 Knot</item>
+        <item>20 Knot 이상</item>
+    </string-array>
+
+    <string-array name="servCode">
+        <item>HCVS</item>
+        <item>MOB/LAUNCH</item>
+        <item>TECH/REP</item>
+        <item>Loaded</item>
+        <item>Weekend</item>
+        <item>PP</item>
+        <item>Add Sur</item>
+        <item>none</item>
+    </string-array>
+
+    <string-array name="vsslType">
+        <item>Bulk Carrier</item>
+        <item>Container</item>
+        <item>LNG/LPG</item>
+        <item>Tanker</item>
+    </string-array>
+
+    <string-array name="coatingType">
+        <item>Conventional</item>
+        <item>Special</item>
+        <item>Epoxy</item>
+        <item>AF</item>
+    </string-array>
+
+</resources>

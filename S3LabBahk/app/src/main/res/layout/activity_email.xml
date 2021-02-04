@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:textSize="12sp"
+        android:text="Back"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+    <EditText
+        android:id="@+id/edit_text_toAddr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:text="taeu.bahk@gmail.com"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Subject:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+    <EditText
+        android:id="@+id/edit_text_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailSubject"
+        android:text="Cleaning Report (2021.00.00)"/>
+
+    <Button
+        android:id="@+id/btn_attachment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="File Attachment" />
+
+
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="120sp"
+        android:stretchColumns="1,2">
+
+        <TableRow>
+            <TextView
+                android:id="@+id/feedback_attach0"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btn_remove0"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:textSize="8dp"
+                android:text="remove"
+                android:visibility="invisible"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/feedback_attach1"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btn_remove1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:textSize="8dp"
+                android:text="remove"
+                android:visibility="invisible"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/feedback_attach2"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btn_remove2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:textSize="8dp"
+                android:text="remove"
+                android:visibility="invisible"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/feedback_attach3"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btn_remove3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:textSize="8dp"
+                android:text="remove"
+                android:visibility="invisible"/>
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Message:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+    <EditText
+        android:id="@+id/edit_text_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="10"
+        android:gravity="start|top"/>
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send"/>
+</LinearLayout>

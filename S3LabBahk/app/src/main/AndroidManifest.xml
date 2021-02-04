@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.s3labbahk">
+
+    /* 1. 일반 권한들 추가 */
+    /* 1-1. MAP(GPS) 관련 */
+    <permission
+        android:name="org.techtown.location.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="org.techtown.location.permission.MAPS_RECEIVE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> // GPS 정보 획득을 위한 권한 추가
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    /* 1-2. 선박 분야 공공 API 관련 */
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    /* 1-3. read to file 관련 */
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.S3LabBahk"
+        android:usesCleartextTraffic="true"> // 선박 분야 공공 API 관련 예외처리
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.S3LabBahk.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        /* 2. MAP API 관련 */
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCyxs43Uv2x_mxjDsOzQHs72UCsPmzThBQ"/>
+
+        /* 3. 각 Activity를 명시적으로 추가 */
+        <activity android:name=".LocationActivity" />
+        <activity android:name=".EstimateActivity" />
+        <activity android:name=".ReportActivity" />
+        <activity android:name=".EmailActivity" />
+    </application>
+
+</manifest>

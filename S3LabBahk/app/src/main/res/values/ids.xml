@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="btnMap" type="id" />
+    <item name="btnShipInfo" type="id" />
+    <item name="btnEstimation" type="id" />
+    <item name="spinner_target" type="id" />
+    <item name="spinner_dest" type="id" />
+</resources>

@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".EstimateActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#0000FF"
+            android:text="HWK Job Card >>"/>
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:text="  Job No:"/>
+
+        <TextView
+            android:id="@+id/jobNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:textSize="12sp"
+            android:text="Back"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:background="#0000FF"
+            android:textColor="#FFFFFF"
+            android:text="|> Help Tutorial"/>
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text="    "/>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:background="#0000FF"
+            android:textColor="#FFFFFF"
+            android:text="|> Help Video"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="120sp"
+        android:background="@drawable/stroke">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="280sp"
+            android:stretchColumns="1,2">
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_API_EM0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#9C27B0"
+                    android:text="Vessel Name" />
+                <EditText
+                    android:id="@+id/edit_res_vsslNm"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:textSize="11sp"
+                    android:hint="MSC Busan"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_API_EM1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#9C27B0"
+                    android:text="IMO Number" />
+                <EditText
+                    android:id="@+id/edit_res_imoNumb"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:textSize="11sp"
+                    android:hint="9289087"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_API_EM2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#9C27B0"
+                    android:text="Vessel Type" />
+                <Spinner
+                    android:id="@+id/spinner_res_vsslType"
+                    android:entries="@array/vsslType"
+                    android:layout_width="20sp"
+                    android:layout_height="40sp"
+                    android:gravity="center"
+                    android:textSize="7sp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_API_EM3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#9C27B0"
+                    android:text="LOA / Beam / Draft" />
+                <EditText
+                    android:id="@+id/edit_res_LBD"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:textSize="11sp"
+                    android:hint="324.86 / 42.8 / 10(M)"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_API_EM4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#9C27B0"
+                    android:text="Current Speed" />
+                <Spinner
+                    android:id="@+id/spinner_res_currSpeed"
+                    android:entries="@array/currSpeed"
+                    android:layout_width="20sp"
+                    android:layout_height="40sp"
+                    android:gravity="center"
+                    android:textSize="7sp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_API_EM5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#9C27B0"
+                    android:text="Propeller Count / Size" />
+                <EditText
+                    android:id="@+id/edit_res_propeller"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:textSize="11sp"
+                    android:hint="1 / (M)"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_API_EM6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#9C27B0"
+                    android:text="Type of Coating" />
+                <Spinner
+                    android:id="@+id/spinner_res_coatingType"
+                    android:entries="@array/coatingType"
+                    android:layout_width="20sp"
+                    android:layout_height="40sp"
+                    android:gravity="center"
+                    android:textSize="7sp"/>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20sp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="120sp"
+        android:background="@drawable/stroke">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="280sp"
+            android:stretchColumns="1,2">
+
+            <TextView
+                android:id="@+id/tv_API"
+                android:layout_width="wrap_content"
+                android:layout_height="40sp"
+                android:gravity="left"
+                android:textSize="14sp"
+                android:textColor="#0000FF"
+                android:text="Agent Contacts"
+                android:paddingTop="10dp" />
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_API_M0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#9C27B0"
+                    android:text="ROV Supervisor\n    in Charge" />
+                <EditText
+                    android:id="@+id/editM_t0"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:textSize="11sp"
+                    android:hint="Rhys Johnson"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_API_M1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#9C27B0"
+                    android:text="Local Agents Point\n    of Contact" />
+                <EditText
+                    android:id="@+id/editM_t1"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:textSize="11sp"
+                    android:hint="JW KIM | Designation : GAC Korea"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_API_M2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#9C27B0"
+                    android:text="Contact Details(Email)\n " />
+                <EditText
+                    android:id="@+id/editM_t2"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:textSize="11sp"
+                    android:hint="jwkim@gac.co.kr"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_API_M3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#9C27B0"
+                    android:text="Contact Details(Ph)\n " />
+                <EditText
+                    android:id="@+id/editM_t3"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:textSize="11sp"
+                    android:hint="+82 10 6523512(M), +82 51 8873513(Off.)"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_API_M4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#9C27B0"
+                    android:text="Customer Point of\n    Contact" />
+                <EditText
+                    android:id="@+id/editM_t4"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:textSize="11sp"
+                    android:hint="Heiko Kaune"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_API_M5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#9C27B0"
+                    android:text="Contact Details(Email)" />
+                <EditText
+                    android:id="@+id/editM_t5"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:textSize="11sp"
+                    android:hint="Heiko.Kaune@gmail.com"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_API_M6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#9C27B0"
+                    android:text="Contact Details(Ph)" />
+                <EditText
+                    android:id="@+id/editM_t6"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:textSize="9sp"
+                    android:hint="+49 1522 2751262 (M), +49 40 34843 295 (Off.)"/>
+            </TableRow>
+
+            <TextView
+                android:id="@+id/tv_CD"
+                android:layout_width="wrap_content"
+                android:layout_height="40sp"
+                android:gravity="left"
+                android:textSize="14sp"
+                android:textColor="#0000FF"
+                android:text="Customer Details"
+                android:paddingTop="10dp" />
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_CD0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#9C27B0"
+                    android:text="Company Name" />
+                <EditText
+                    android:id="@+id/editCD0"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:textSize="11sp"
+                    android:hint="사명 입력"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_CD1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#9C27B0"
+                    android:text="Job Order Number" />
+                <EditText
+                    android:id="@+id/editCD1"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:textSize="11sp"
+                    android:hint="관리번호 입력"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_CD2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#9C27B0"
+                    android:text="Job Date" />
+                <EditText
+                    android:id="@+id/editCD2"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:textSize="11sp"
+                    android:hint="20-Sep-19"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_CD3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#9C27B0"
+                    android:text="Cleaning Location" />
+                <EditText
+                    android:id="@+id/editCD3"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:textSize="11sp"
+                    android:hint="좌표 입력"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_CD4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#9C27B0"
+                    android:text="Finish Date" />
+                <EditText
+                    android:id="@+id/editCD4"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:textSize="11sp"
+                    android:hint="21-Sep-19"/>
+            </TableRow>
+
+            <TextView
+                android:id="@+id/tv_PM"
+                android:layout_width="wrap_content"
+                android:layout_height="40sp"
+                android:gravity="left"
+                android:textSize="14sp"
+                android:textColor="#0000FF"
+                android:text="Planning Meeting"
+                android:paddingTop="10dp" />
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_PM0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#9C27B0"
+                    android:text="Meeting Date" />
+                <Button
+                    android:id="@+id/btnDate"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:text="Date"
+                    android:textSize="11sp"
+                    android:onClick="onClickDate" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#9C27B0"
+                    android:text="               " />
+                <EditText
+                    android:id="@+id/editPM0"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:textSize="11sp"
+                    android:hint="11/01/2021"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_PM1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#9C27B0"
+                    android:text="Time on Site" />
+                <EditText
+                    android:id="@+id/editPM1"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:textSize="11sp"
+                    android:hint="10:00 AM"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_PM2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#9C27B0"
+                    android:text="Time off Site" />
+                <EditText
+                    android:id="@+id/editPM2"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:textSize="11sp"
+                    android:hint="14:30 PM"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_PM3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#9C27B0"
+                    android:text="Time Zone" />
+                <RadioGroup
+                    android:id="@+id/radioGroupPM0"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp">
+                    <RadioButton
+                        android:checked="true"
+                        android:id="@+id/rb_asia"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:text="Asia" />
+                    <RadioButton
+                        android:id="@+id/rb_pacific"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:text="Pacific" />
+                </RadioGroup>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_PM4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#9C27B0"
+                    android:text="ROV Team" />
+                <RadioGroup
+                    android:id="@+id/radioGroupPM1"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp">
+                    <RadioButton
+                        android:checked="true"
+                        android:id="@+id/rb_esther1"
+                        android:layout_width="64dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:text="Esther 1" />
+                    <RadioButton
+                        android:id="@+id/rb_esther2"
+                        android:layout_width="64dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:text="Esther 2" />
+                    <RadioButton
+                        android:id="@+id/rb_esther3"
+                        android:layout_width="64dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:text="Esther 3" />
+                </RadioGroup>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20sp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="120sp"
+        android:background="@drawable/stroke">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="280sp"
+            android:stretchColumns="1,2,3">
+
+            <TextView
+                android:id="@+id/text_view_services"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textSize="14sp"
+                android:textColor="#0000FF"
+                android:text="Services"
+                android:paddingTop="1dp" />
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/text_view_sm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="center"
+                    android:textSize="11sp"
+                    android:textColor="#9C27B0"
+                    android:text="Service Name" />
+                <TextView
+                    android:id="@+id/text_view_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="center"
+                    android:textSize="11sp"
+                    android:textColor="#9C27B0"
+                    android:text="Code" />
+                <TextView
+                    android:id="@+id/text_view_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:gravity="center"
+                    android:textSize="11sp"
+                    android:textColor="#9C27B0"
+                    android:text="Description" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_serv0"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:text="02. Hull Cleaning - Vertical Sides" />
+
+                <Spinner
+                    android:id="@+id/spinnerServCode0"
+                    android:entries="@array/servCode"
+                    android:layout_width="20sp"
+                    android:layout_height="40sp"
+                    android:gravity="center"
+                    android:textSize="7sp"/>
+
+                <TextView
+                    android:id="@+id/tv_desc0"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:text="To provide a suitably qualified team of ROV Operators and a HullWiper Ltd ROV capable of carrying out Hull Cleaning of the vessels submerged vertical sides and 1 x m of the flat bottom area in way of the turn of bilge both Port and Stbd sides and as per guidelines of IMCA R 004 Rev. this does not include sea chest gratings. 2 please be advised that in our experience full flat bottom cleaning is not required on an actively trading vessel unless there have been prolonged idle periods alongside or at anchor" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_serv1"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:text="07a. ROV Support Launch/Platform Costs Per Day" />
+
+                <Spinner
+                    android:id="@+id/spinnerServCode1"
+                    android:entries="@array/servCode"
+                    android:layout_width="20sp"
+                    android:layout_height="40sp"
+                    android:gravity="center"
+                    android:textSize="7sp"/>
+
+                <TextView
+                    android:id="@+id/tv_desc1"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:text="ROV Support launch/Platform on-site to carry out ROV Related Cleaning/Inspection Operations as required based on each attendance and or every day (24 x hours) or part thereof" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_serv2"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:text="09A. Provision of Technical Reports" />
+
+                <Spinner
+                    android:id="@+id/spinnerServCode2"
+                    android:entries="@array/servCode"
+                    android:layout_width="20sp"
+                    android:layout_height="40sp"
+                    android:gravity="center"
+                    android:textSize="7sp"/>
+
+                <TextView
+                    android:id="@+id/tv_desc2"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:text="NO SURCHARGE for the provision of full documentation inc CCTV Video (If required) and full technical reports sent to your office electronically on completion of operations accordingly in due course" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_serv3"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:text="09B. Draft Surcharge" />
+
+                <Spinner
+                    android:id="@+id/spinnerServCode3"
+                    android:entries="@array/servCode"
+                    android:layout_width="20sp"
+                    android:layout_height="40sp"
+                    android:gravity="center"
+                    android:textSize="7sp"/>
+
+                <TextView
+                    android:id="@+id/tv_desc3"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:text="There is NO SURCHARGE to attend the vessel in a laden condition assuming cleaning is only required from the 10m draft line down to the turn of bilge areas, in the event that the vessel has been idle in a fully laden condition and as a result if cleaning is additionally required from the 10m draft line upwards to the loadline/waterline this will incur a 50% surcharge on the vertical side cleaning rate quoted" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_serv4"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:text="09C ROV. Weekend" />
+
+                <Spinner
+                    android:id="@+id/spinnerServCode4"
+                    android:entries="@array/servCode"
+                    android:layout_width="20sp"
+                    android:layout_height="40sp"
+                    android:gravity="center"
+                    android:textSize="7sp"/>
+
+                <TextView
+                    android:id="@+id/tv_desc4"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:text="There will be a 25% surcharge incurred for ROV Orientated jobs carried out on Local Weekends and or Local Public Holidays as required to satisfy local labor laws and regulations with regards to overtime pay for staff and services" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_serv5"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:text="6. 04a. Propeller Super-Polishing" />
+
+                <Spinner
+                    android:id="@+id/spinnerServCode5"
+                    android:entries="@array/servCode"
+                    android:layout_width="20sp"
+                    android:layout_height="40sp"
+                    android:gravity="center"
+                    android:textSize="7sp"/>
+
+                <TextView
+                    android:id="@+id/tv_desc5"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:text="To provide a suitably qualified team of Divers and all associated equipment in accordance with OGP411 and or local legislation to be able to carry out Propeller Super-Polishing of the vessels submerged propeller hub, blades and cone assembly to within 1 x micron CLA which equates to grade A on the Rubert Comparator, dependent on the prevailing condition of the blade surfaces on attendance. 15% surcharge will apply if arrival draft exceed 12M." />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_serv6"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:text="7. 11. T&amp;C" />
+
+                <Spinner
+                    android:id="@+id/spinnerServCode6"
+                    android:entries="@array/servCode"
+                    android:layout_width="20sp"
+                    android:layout_height="40sp"
+                    android:gravity="center"
+                    android:textSize="7sp"/>
+
+                <TextView
+                    android:id="@+id/tv_desc6"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:text="Cancellation" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_known0"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#0000FF"
+                    android:text="Known\nDamages" />
+                <EditText
+                    android:id="@+id/editO0"
+                    android:layout_width="300dp"
+                    android:layout_height="120sp"
+                    android:textSize="11sp"
+                    android:layout_span="2"
+                    android:hint="No information regarding structural or other Damage has been submitted to HullWiper Ltd from the owners/managers and no damage is anticipated to be encountered during this attendance with the exception of the normal anchor cable abrasions to the coating in way of the immediate submerged bow areas and or Tug abrasions in way of the vessels vertical sides"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_known1"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#0000FF"
+                    android:text="Known Fouling\nCondition" />
+                <EditText
+                    android:id="@+id/editO1"
+                    android:layout_width="300dp"
+                    android:layout_height="120sp"
+                    android:textSize="11sp"
+                    android:layout_span="2"
+                    android:hint="We anticipate that the submerged area of the hull will be covered with a marine type slime and or marine ectocarpus weed with only isolated areas of pinhead barnacle growth, dock block marks are anticipated to be fully fouled with weed and calcareous growth. in the event that on arrival the marine fouling is heavier than &quot;Normal&quot; then there will be an additional charge of 20% of the quoted cleaning rate to take account of the additional consumable items that will be required to clean heavy fouling, these items include nozzles and the cleaning boards that will be damaged by heavy barnacle growth. All operational timings are approximate and will be determined by the nature of marine fouling attached to the submerged areas encountered and the prevailing weather conditions,"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_known2"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#0000FF"
+                    android:text="Special\nRequirements" />
+                <EditText
+                    android:id="@+id/editO2"
+                    android:layout_width="300dp"
+                    android:layout_height="120sp"
+                    android:textSize="11sp"
+                    android:layout_span="2"
+                    android:hint="The Initial inspection may be required to be witnessed by a member of the vessels staff, or initial evidence of fouling condition may be required to be passed to the vessels Superintendent/Manager by e-mail via the Master or a report given verbally, then the ROV will get confirmed the exact scope of cleaning required &quot;full cleaning or vertical sides only&quot; all to be carried out as per owners/managers permissions"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_known3"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="#0000FF"
+                    android:text="Known Speed\nReduction" />
+                <EditText
+                    android:id="@+id/editO3"
+                    android:layout_width="300dp"
+                    android:layout_height="120sp"
+                    android:textSize="11sp"
+                    android:layout_span="2"
+                    android:hint="There has been no reported speed reduction to HullWiper Ltd during the tender stage"/>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onExcelSave"
+        android:text="Save"/>
+</LinearLayout>

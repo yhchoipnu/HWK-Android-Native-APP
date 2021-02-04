@@ -19,55 +19,55 @@
  	- [부산항만공사 가이드북](https://www.chainportal.co.kr/template/OpenAPIGuide.pdf)
 
 ## 파일 설명
-  1. MainActivity.java
+ 1. MainActivity.java
  	- MainActivity
 
-  2. LocationActivity.java
+ 1. LocationActivity.java
  	- 위치정보 관련 로직 (갱신 주기 : 5s로 임의 설정하였음)
 
-  3. EstimateActivity.java
+ 1. EstimateActivity.java
  	- 견적서 작성 및 csv 파일로 저장 로직(파일 저장 위치: 파일관리자>내부저장소>Android>data>프로젝트명(현재: S3LabBahk)>files에 저장됨)
 
-  4. EstimateDateFragment.java
+ 1. EstimateDateFragment.java
  	- 견적서 액티비티의 달력용 로직
 
-  5. ReportActivity.java
+ 1. ReportActivity.java
  	- 리포트 작성 및 csv 파일로 저장 로직
 
-  6. ReportDateFragment.java
+ 1. ReportDateFragment.java
  	- 리포트 액티비티의 달력용 로직
 
-  7. EmailActivity.java
+ 1. EmailActivity.java
  	- 이메일 작성, 발송 로직
 
-  8. res/layout/conetent_main.xml
+ 1. res/layout/conetent_main.xml
  	- MainActivity와 대응되는 디폴트 xml 파일
 
-  9. res/layout/activitiy_loc.xml
+ 1. res/layout/activitiy_loc.xml
  	- LocationActivity와 대응되는 xml 파일
 
- 10. res/layout/activity_estimate.xml
+ 1. res/layout/activity_estimate.xml
  	- EstimateActivity와 대응되는 xml 파일
 
- 11. res/layout/activity_report.xml
+ 1. res/layout/activity_report.xml
  	- ReportActivity와 대응되는 xml 파일
 
- 12. res/layout/activitiy_email.xml
+ 1. res/layout/activitiy_email.xml
  	- EmailActivity와 대응되는 xml 파일
 
- 13. res/drawable/stroke.xml
+ 1. res/drawable/stroke.xml
  	- TextView, ImageView 등의 테두리 설정
 
- 14. res/values/arrays.xml
+ 1. res/values/arrays.xml
  	- Spinner 등에 출력해 줄 array(list) 값 설정
 
- 15. res/AndroidManifest.xml
+ 1. res/AndroidManifest.xml
  	- 1. Activities 명시적 추가 2. GPS, REST API, 스토리지(파일 등) 권한 설정 등
 
- 16. gradle/build.gradle(:app)
+ 1. gradle/build.gradle(:app)
  	- 외부 라이브러리의 dependencies 설정 등
 
- 17. gradle/build.gradle(프로젝트명)
+ 1. gradle/build.gradle(프로젝트명)
  	- 현재 기준 : S3LabBahk (이는, 실제 APP name으로 사용됨)
 
 ## 라이브러리 목록

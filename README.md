@@ -1,6 +1,6 @@
 # HWK-Android-Native-APP
 
-## API 연동 관련 웹사이트
+## 1. API 연동 관련 웹사이트
 
 ### Google Developers
 - [Maps SDK for Android](https://developers.google.com/maps/documentation/android-sdk/usage-and-billing?hl=ko)
@@ -18,7 +18,7 @@
  	- 선박 입‧출항 정보를 받아오는 REST API 사용법 관련 정보 제공 사이트
  	- [부산항만공사 가이드북](https://www.chainportal.co.kr/template/OpenAPIGuide.pdf)
 
-## 파일 설명
+## 2. 파일 설명
  1. MainActivity.java
  	- MainActivity
 
@@ -73,7 +73,7 @@
  	- 프로젝트 전체에 대한 gradle file
  	- ※ [참고] 프로젝트명 : 실제 APP name으로 사용됨
 
-## 라이브러리 목록
+## 3. 라이브러리 목록
 
 ### 추가한 외부 라이브러리
 - [opencsv.jar](https://sourceforge.net/projects/opencsv/)

@@ -5,7 +5,7 @@
 ### Google Developers
 - [Maps SDK for Android](https://developers.google.com/maps/documentation/android-sdk/usage-and-billing?hl=ko)
  	- Google MAP API 결제 및 연동, 사용 방법 등의 정보를 제공하는 공식 가이드 사이트
- 	- Map Load는 무료이나, Steet View는 유료이니, 추가 개발 시 주의 요망
+ 	- Map Load는 무료이나, Steet View는 유료임 (=> 추가 개발 시 주의 요망)
  	- Google Map API functions 등 정보 제공
 
 ### Google Cloud Platform
@@ -64,7 +64,7 @@
 
  1. res/AndroidManifest.xml
  	- Activities 명시적 추가
- 	- GPS, REST API, 스토리지(파일 등) 권한 설정 등
+ 	- GPS, REST API, 디바이스 스토리지 접근 권한 설정 등
 
  1. gradle/build.gradle(:app)
  	- 외부 라이브러리의 dependencies 설정 등
